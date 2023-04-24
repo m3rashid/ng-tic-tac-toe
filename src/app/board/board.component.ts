@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss'],
 })
-export class BoardComponent {
-  squares: any[];
+export class BoardComponent implements OnInit {
+  squares: string[];
   xIsNext: boolean;
   winner: string;
 
@@ -59,6 +59,6 @@ export class BoardComponent {
         return this.squares[a];
       }
     }
-    return null;
+    return '';
   }
 }
